@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+     <link rel="stylesheet" href="static/main.css">
+
+
+     <body>
+
+          <h3 style="margin:auto">
+               <a class="button" href="{{ url_for('show_all') }}"> REGISTER</a>
+          </h3>
+
+          <hr />
+          {%- for message in get_flashed_messages() %}
+          {{ message }}
+          {%- endfor %}
+
+          <h3><a class="button" href="{{ url_for('new') }}">NEW STUDENT
+               </a></h3>
+
+          <table id="students">
+               <thead>
+                    <tr>
+                         <th>Name</th>
+                         <th>Contacts</th>
+                         <th>Address</th>
+                         <th>Code</th>
+                         <th></th>
+                    </tr>
+               </thead>
+
+               <tbody>
+                    {% for student in students %}
+                    <tr>
+                         <td>{{ student.name }}</td>
+                         <td>{{ student.contacts }}</td>
+                         <td>{{ student.address }}</td>
+                         <td>{{ student.code }}</td>
+                         <td>
+                              <a class="button" href="/update/{{student.id}}"> Edit</a>
+                              <a class="button" href="/delete/{{student.id}}">Delete</a>
+                         </td>
+                    </tr>
+                    {% endfor %}
+               </tbody>
+          </table>
+
+     </body>
+
+</html>
