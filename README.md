@@ -1,4 +1,4 @@
-# REGISTER
+#REGISTER
 #To activatave the virtual Enviroment : myapp\bin\activate
 
 
