@@ -1,6 +1,7 @@
 #REGISTER
 
 #The project was implemented using a combination of HTML, CSS, and the Python Flask framework, with the All The CRUD methods.
+
 #To activatave the virtual Enviroment : myapp\bin\activate
 
 
